@@ -1,6 +1,6 @@
-import { UserModel } from "../models/User.js";
+import { UserModel } from "../models/User.mjs";
 import * as bcrypt from "bcrypt";
-import { createJWT } from "../utils/jwt.js";
+import { createJWT } from "../utils/jwt.mjs";
 
 export const ctrlCreateUser = async (req, res) => {
   try {

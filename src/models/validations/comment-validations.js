@@ -1,6 +1,6 @@
 import { param, body } from "express-validator";
 import { isValidObjectId } from "mongoose";
-import { applyValidations } from "../../middlewares/apply-validations.js";
+import { applyValidations } from "../../middlewares/apply-validations.mjs";
 
 export const createCommentValidations = [
   body("content")

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { config } from "../settings/config.js";
+import { config } from "../settings/config.mjs";
 
 export const createJWT = async ({ userId }) => {
   return new Promise((res, rej) => {

@@ -1,6 +1,6 @@
 import { body, param } from "express-validator";
 import { isValidObjectId } from "mongoose";
-import { applyValidations } from "../../middlewares/apply-validations.js";
+import { applyValidations } from "../../middlewares/apply-validations.mjs";
 
 export const createTravelPostValidations = [
   body("title")

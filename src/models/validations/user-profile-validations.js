@@ -1,6 +1,6 @@
 import { body } from "express-validator";
-import { applyValidations } from "../../middlewares/apply-validations.js";
-import { UserModel } from "../User.js";
+import { applyValidations } from "../../middlewares/apply-validations.mjs";
+import { UserModel } from "../User.mjs";
 
 export const createUserValidations = [
   body("avatar")

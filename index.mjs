@@ -29,5 +29,5 @@ app.use('/api/travels', authHeader, validateToken, travelRouter);
 
 app.listen(config.port, async () => {
   await startConnection({ uri: config.mongo, database: config.database });
-  console.log('Server is running on port: http://localhost:' + config.port);
+  console.log(`'Server is running on port: http://localhost:' + ${config.port}`);
 });

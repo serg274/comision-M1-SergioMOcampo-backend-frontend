@@ -1,5 +1,5 @@
-import { verifyJWT } from "../utils/jwt.mjs";
-import { UserModel } from "../models/User.mjs";
+import { verifyJWT } from "../utils/jwt.js";
+import { UserModel } from "../models/User.js";
 
 export const validateToken = async (req, res, next) => {
   try {

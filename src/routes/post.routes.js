@@ -6,7 +6,7 @@ import {
   ctrlObtenerPlaylist,
   ctrlListarPlaylists,
   ctrlActualizarPlaylist,
-} from "../controllers/travel.controller.mjs";
+} from "../controllers/travel.controller.js";
 
 import {
   crearValidacionesPlaylist,
@@ -14,7 +14,7 @@ import {
   obtenerValidacionesPlaylist,
   listarValidacionesPlaylists,
   actualizarValidacionesPlaylist,
-} from "../models/validations/travel-validations.mjs";
+} from "../models/validations/travel-validations.js";
 
 const routerTravel = Router();
 

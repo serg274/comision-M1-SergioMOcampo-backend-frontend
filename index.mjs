@@ -3,17 +3,17 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-import { config } from './src/settings/config.mjs';
-import { startConnection } from './src/settings/database.mjs';
+import { config } from './src/settings/config.js';
+import { startConnection } from './src/settings/database.js';
 
-import { authRouter } from './src/routes/auth.routes.mjs';
-import { travelRouter } from './src/routes/travel.routes.mjs';
-import { validateToken } from './src/middlewares/validate-token.mjs';
-import { authHeader } from './src/models/validations/auth-validation.mjs';
+import { authRouter } from './src/routes/auth.routes.js';
+import { travelRouter } from './src/routes/travel.routes.js';
+import { validateToken } from './src/middlewares/validate-token.js';
+import { authHeader } from './src/models/validations/auth-validation.js';
 
 const app = express();
 
-app.use(express.mjson());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({

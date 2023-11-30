@@ -1,6 +1,6 @@
-import { TravelPostModel } from "../models/TravelPost.mjs";
-import { CommentModel } from "../models/Comment.mjs";
-import { isAuthor } from "./travel.controller.mjs";
+import { TravelPostModel } from "../models/TravelPost.js";
+import { CommentModel } from "../models/Comment.js";
+import { isAuthor } from "./travel.controller.js";
 
 export const ctrlCreateTravelPost = async (req, res) => {
   const { userId } = req.user;

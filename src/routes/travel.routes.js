@@ -5,14 +5,14 @@ import {
   ctrlGetTravelPostById,
   ctrlAddComment,
   ctrlDeleteComment,
-} from "../controllers/travel.controller.mjs";
+} from "../controllers/travel.controller.js";
 import {
   createTravelPostValidations,
   listTravelPostsValidations,
   getTravelPostValidations,
   addCommentValidations,
   deleteCommentValidations,
-} from "../models/validations/travel-post-validation.mjs";
+} from "../models/validations/travel-post-validation.js";
 
 const travelRouter = Router();
 

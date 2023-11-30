@@ -1,5 +1,5 @@
 import { header } from "express-validator";
-import { applyValidations } from "../../middlewares/apply-validations.mjs";
+import { applyValidations } from "../../middlewares/apply-validations.js";
 
 export const userAuthHeader = [
   header("authorization")

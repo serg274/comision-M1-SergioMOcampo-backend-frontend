@@ -2,11 +2,11 @@ import { Router } from "express";
 import {
   ctrlCreateUser,
   ctrlLoginUser,
-} from "../controllers/user.controller.mjs";
+} from "../controllers/user.controller.js";
 import {
   loginUserValidations,
   createUserValidations,
-} from "../models/validations/user-auth-validation.mjs";
+} from "../models/validations/user-auth-validation.js";
 
 const authRouter = Router();
 

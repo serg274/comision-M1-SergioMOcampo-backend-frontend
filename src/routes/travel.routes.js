@@ -1,40 +1,30 @@
 import { Router } from "express";
-
 import {
-  ctrlCreatePost,
-  ctrlListPosts,
-  ctrlGetPostById,
-  ctrlUpdatePost,
-  ctrlDeletePost,
-} from "../controllers/travel.controller.mjs"; // Cambiado el controlador
-
+  ctrlCreateTravelPost,
+  ctrlListTravelPosts,
+  ctrlGetTravelPostById,
+  ctrlAddComment,
+  ctrlDeleteComment,
+} from "../controllers/travel.controller.mjs";
 import {
-  createPostValidations,
-  deletePostValidations,
-  getPostValidations,
-  listPostValidations,
-  updatePostValidations,
-} from "../models/validations/travel-post-validation.mjs"; // Cambiado la validación
+  createTravelPostValidations,
+  listTravelPostsValidations,
+  getTravelPostValidations,
+  addCommentValidations,
+  deleteCommentValidations,
+} from "../models/validations/travel-post-validation.mjs";
 
-const travelRouter = Router(); // Cambiado el nombre del enrutador
+const travelRouter = Router();
 
-travelRouter.post("/:playlistId/viajes", createPostValidations, ctrlCreatePost); // Cambiada la ruta
-travelRouter.get("/:playlistId/viajes", listPostValidations, ctrlListPosts); // Cambiada la ruta
+travelRouter.post("/", createTravelPostValidations, ctrlCreateTravelPost);
+travelRouter.get("/", listTravelPostsValidations, ctrlListTravelPosts);
 
-travelRouter.get(
-  "/:playlistId/viajes/:PostId",
-  getPostValidations,
-  ctrlGetPostById
-);
-travelRouter.patch(
-  "/:playlistId/viajes/:PostId",
-  updatePostValidations,
-  ctrlUpdatePost
-);
+travelRouter.get("/:postId", getTravelPostValidations, ctrlGetTravelPostById);
+travelRouter.post("/:postId/comments", addCommentValidations, ctrlAddComment);
 travelRouter.delete(
-  "/:playlistId/viajes/:PostId",
-  deletePostValidations,
-  ctrlDeletePost
+  "/:postId/comments/:commentId",
+  deleteCommentValidations,
+  ctrlDeleteComment
 );
 
 export { travelRouter };
